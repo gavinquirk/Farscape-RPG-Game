@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lord of the Rings RPG Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div id="characters" class="row"></div>
+
+        <div id="gameplay" class="row"></div>
+
+
+    </div>
+
+<!-- jquery -->
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+<!-- javascript -->
+    <script>
+
+    $(document).ready(function() {
+
+        var chosenHero
+        var chosenEnemy
+        var isHeroAlive
+        var isEnemyAlive
+
+        function initGame() {
+
+            // Generate Characters 
+            for ( var i = 0 ; i < charArr.length ; i++) {
+                var num = Math.floor(12 / charArr.length)
+                var charThing = $("<div class='col-md-"+num+"'><img src='"+charArr[i].image+"' style='width:150px;height:150px;'/></div>")
+                $("#characters").append(charThing)
+            }
+        }
+        // Character Array :::  name, HP, strength, img
+        var charArr = [
+            {
+                name : "Gandalf",
+                hp : 125,
+                strength : 110,
+                image : "assets/images/gandalf.jpg"
+            },
+            {
+                name : "Frodo",
+                hp : 40,
+                strength : 65,
+                image : "assets/images/frodo.jpg"
+            },
+            {
+                name : "Sam",
+                hp : 60,
+                strength : 60,
+                image : "assets/images/sam.jpg"
+            },
+            {
+                name : "Legolas",
+                hp : 80,
+                strength : 100,
+                image : "assets/images/legolas.png"
+            },
+            {
+                name : "Sauron",
+                hp : 150,
+                strength : 150,
+                image : "assets/images/sauron.jpg"
+            },
+            {
+                name : "Saruman",
+                hp : 100,
+                strength : 100,
+                image : "assets/images/saruman.jpg"
+            },
+        ]
+
+        initGame()
+    })
+    </script>
+</body>
+</html>
