@@ -1,2 +1,2 @@
-# Practice-Game
-a practice farscape rpg
+# week-4-game
+a Farscape based rpg game
