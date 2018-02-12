@@ -110,7 +110,7 @@ $(document).ready(function() {
         console.log(chosenHero.name + " VS " + chosenEnemy.name)
 
         // If hero does not survive attack
-        if (chosenHero.health < chosenEnemy.attack) {
+        if (chosenHero.health <= chosenEnemy.attack) {
             // Health and attack calculations
             chosenHero.health = chosenHero.health - chosenEnemy.attack
             chosenEnemy.health = chosenEnemy.health - chosenHero.attack
@@ -121,7 +121,7 @@ $(document).ready(function() {
    
         }
         // If enemy does not survive attack
-        else if (chosenEnemy.health < chosenHero.attack) {
+        else if (chosenEnemy.health <= chosenHero.attack) {
             // Health and attack calculations
             chosenHero.health = chosenHero.health - chosenEnemy.attack
             chosenEnemy.health = chosenEnemy.health - chosenHero.attack
