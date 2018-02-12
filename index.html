@@ -4,86 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lord of the Rings RPG Game</title>
+    <title>Farscape Game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- CONTAINER START -->
     <div class="container">
 
-        <div id="characters" class="row"></div>
+        <!-- JUMBOTRON -->
+        <div class="jumbotron mt-4">
+            <h1>The Farscape Battle Game</h1>
+            <hr><br>
+            <h6>Choose a hero and villain below!</h6>
+        </div>
 
-        <div id="gameplay" class="row"></div>
+        <!-- Battle Container -->
+        <div id="battleContainer" class="row border border-light rounded mb-4">
 
+            <!-- Hero Container -->
+            <div id="heroContainer" class="col-md-4">
+                <div id="heroImage"></div>
+                <div id="heroName"></div>
+                <div id="heroHealth"></div>
+                <div id="heroAttack"></div>
+            </div>
 
+            <!-- Fight Container -->
+            <div id="fightInfo" class="col-md-4 text-center">
+                <h1 class="mt-4">Versus</h1>
+                <button class="mt-4 btn btn-primary" id="fightButton">FIGHT</button>
+            </div>
+
+            <!-- Enemy Container -->
+            <div id="enemyContainer" class="col-md-4">
+                <div id="enemyImage"></div>
+                <div id="enemyName"></div>
+                <div id="enemyHealth"></div>
+                <div id="enemyAttack"></div>
+            </div>
+
+        </div>
+
+        <!-- Charactor Container -->
+        <div id="charContainer" class="row"></div>
+        
     </div>
 
-<!-- jquery -->
+
+    <!-- JQUERY -->
     <script
-    src="http://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-<!-- javascript -->
-    <script>
-
-    $(document).ready(function() {
-
-        var chosenHero
-        var chosenEnemy
-        var isHeroAlive
-        var isEnemyAlive
-
-        function initGame() {
-
-            // Generate Characters 
-            for ( var i = 0 ; i < charArr.length ; i++) {
-                var num = Math.floor(12 / charArr.length)
-                var charThing = $("<div class='col-md-"+num+"'><img src='"+charArr[i].image+"' style='width:150px;height:150px;'/></div>")
-                $("#characters").append(charThing)
-            }
-        }
-        // Character Array :::  name, HP, strength, img
-        var charArr = [
-            {
-                name : "Gandalf",
-                hp : 125,
-                strength : 110,
-                image : "assets/images/gandalf.jpg"
-            },
-            {
-                name : "Frodo",
-                hp : 40,
-                strength : 65,
-                image : "assets/images/frodo.jpg"
-            },
-            {
-                name : "Sam",
-                hp : 60,
-                strength : 60,
-                image : "assets/images/sam.jpg"
-            },
-            {
-                name : "Legolas",
-                hp : 80,
-                strength : 100,
-                image : "assets/images/legolas.png"
-            },
-            {
-                name : "Sauron",
-                hp : 150,
-                strength : 150,
-                image : "assets/images/sauron.jpg"
-            },
-            {
-                name : "Saruman",
-                hp : 100,
-                strength : 100,
-                image : "assets/images/saruman.jpg"
-            },
-        ]
-
-        initGame()
-    })
-    </script>
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <!-- JAVASCRIPT -->
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>

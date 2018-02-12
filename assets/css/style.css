@@ -1,0 +1,38 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+}
+
+.jumbotron {
+    background-color:lightslategray;
+}
+
+
+.charIcon {
+    width: 150px;
+    height: 150px;
+}
+
+.fader {
+    opacity: 0.5;
+}
+
+#heroContainer {
+    background-color: grey;
+    padding: 1%;
+}
+
+#enemyContainer {
+    background-color: grey;
+    padding: 1%;
+}
+
+#fightInfo {
+    background-color: lightslategray;
+}
+
+#bigImage {
+    width: 100%;
+    height: 300px;
+}
+
